@@ -55,9 +55,10 @@ function Creatures({
         const { id } = creature;
         const active = activeCreatureId === id;
         const focused = focusedCreature === i;
+        const className = `creature-scroll-effect ${active ? 'active' : ''}`
         return (
           <div
-            className="creature-scroll-effect"
+            className={className}
             key={id}
             ref={refs[id]}
           >

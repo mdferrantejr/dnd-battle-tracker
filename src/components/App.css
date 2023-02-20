@@ -700,6 +700,9 @@ input[type="number"] {
 .creature-list {
   width: 80%;
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .creature-wrapper {
@@ -1101,7 +1104,9 @@ input[type="number"] {
 .creature-scroll-effect {
   scroll-margin-top: 54px;
 }
-
+.creature-scroll-effect.active {
+  order: -1;
+}
 .battle-toolbar--stat-value__button {
   border: none;
   box-shadow: none;

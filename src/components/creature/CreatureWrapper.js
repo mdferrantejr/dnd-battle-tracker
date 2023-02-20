@@ -37,7 +37,7 @@ class CreatureWrapper extends Component {
     super(props);
 
     this.state = {
-      expanded: false,
+      expanded: true,
     };
 
     this.expandCreatureHandler = this.expandCreatureHandler.bind(this);
@@ -82,7 +82,7 @@ class CreatureWrapper extends Component {
   }
 
   expandCreatureHandler() {
-    this.setState((prevState) => ({ ...prevState, expanded: !prevState.expanded }));
+    // this.setState((prevState) => ({ ...prevState, expanded: !prevState.expanded }));
   }
 
   focusHandler(toolbar) {
@@ -175,7 +175,7 @@ class CreatureWrapper extends Component {
           aria-label={creatureAriaLabel}
           onFocus={() => this.focusHandler(false)}
           data-creature-id={id}
-          style={{ backgroundImage: `linear-gradient(to right, #EBE1AD ${leftPercentage}%, lightgrey ${rightPercentage}%)` }}
+          style={{ backgroundImage: `linear-gradient(to right, rgb(203 203 203) ${leftPercentage}%, #ff9090 ${rightPercentage}%)` }}
         >
           <div className={getColumnClasses(showExpanded, multiColumn)}>
             <CreatureHeader
